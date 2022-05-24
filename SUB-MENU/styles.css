@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  padding-top: 70px; /* header가 absolute로 차지하고 있는 부분에 <p>가 차지하지 않도록 */
+  background: green;
+  overflow-y: scroll;
+}
+
+header {
+  margin-top: 20px;
+  background: linear-gradient(
+    white 50px,
+    rgba(255, 255, 255, 0.5) 50px,
+    rgba(255, 255, 255, 0.5)
+  );
+  position: absolute; /* sub menu 열렸을 때 <p> 위에 위치하도록 하기 위함 */
+  top: 0;
+  left: 0;
+  right: 0; /* header가 모든 width 차지하게 하기 위함 */
+  transition: height 0.1s linear; /* sub menu가 나타나는 부분 자연스럽게 animation 효과 */
+  height: 50px;
+  overflow: hidden; /* height: 50px 넘어가는 부분은 hidden! */
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto; /* nav가 중앙에 정렬 */
+}
+
+nav > ul > li {
+  float: left;
+  line-height: 50px;
+  margin-right: 40px;
+  position: relative;
+}
+
+nav > ul > li ul {
+  width: 100%;
+  position: absolute; /* absolute로 지정해주어야 전체 layout 깨지지 않음 */
+}
+
+nav > ul > li ul li {
+  white-space: nowrap;
+}
