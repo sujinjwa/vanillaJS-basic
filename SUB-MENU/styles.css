@@ -7,7 +7,7 @@ ul li {
   list-style: none;
 }
 
-.clearfix:after {
+.clearfix::after {
   content: "";
   display: block;
   clear: both;
@@ -50,6 +50,11 @@ nav > ul > li {
 nav > ul > li ul {
   width: 100%;
   position: absolute; /* absolute로 지정해주어야 전체 layout 깨지지 않음 */
+  display: none; /* 특정 li에 직접 마우스 hover하지 않으면, 하위 메뉴(ul) 보이지 않음  */
+}
+
+nav > ul > li:hover ul {
+  display: block; /* 마우스 hover된 특정 li의 하위 메뉴(ul)만 보여짐 */
 }
 
 nav > ul > li ul li {
