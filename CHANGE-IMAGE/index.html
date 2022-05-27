@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Image</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center">
+      <div>
+        <img src="images/cat1.jpg" id="chosenImg" alt="cats" />
+      </div>
+    </div>
+
+    <!-- 사용자 정의 커스텀 속성 추가할 때는 속성명 앞에 반드시 접두어 'data-' 붙여야 함 -->
+    <div class="images">
+      <!-- img 태그의 src 속성 값 변경해야 하므로, data-image 값으로 src 속성 값 될 수 있는 이미지 파일 주소 값으로 설정 -->
+      <button class="images__button" data-image="images/cat1.jpg">
+        고양이 1번
+      </button>
+      <button class="images__button" data-image="images/cat2.jpg">
+        고양이 2번
+      </button>
+      <button class="images__button" data-image="images/cat3.jpg">
+        고양이 3번
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.images__list {
+  margin: 0px 20px;
+  cursor: pointer;
+}
