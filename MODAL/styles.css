@@ -1,0 +1,46 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button {
+  all: unset; /* 기본 설정 한번에 초기화 */
+  background-color: steelblue;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute; /* 일반적 문서 흐름에서 제거 및 page layout에서 공간 배정 x. 가장 가까운 상위 요소에 대해 상대적으로 배치 */
+}
+
+.modal__content {
+  position: relative; /* 일반적 문서 흐름 따라 배치. 자기 자신 기준으로 top,left 등 offset 적용. 다른 요소에 영향 주지 x */
+  top: 0px;
+  background-color: white;
+  width: 10%;
+  padding: 50px 100px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
